@@ -1,3 +1,4 @@
+
 const colors = ['#7FFFD4', '#F0E68C', '#FA8072'];
 
 function changeBackgroundColor() {
@@ -21,8 +22,6 @@ function changeSlide() {
     imageElement.src = images[currentIndex];
     currentIndex = (currentIndex + 1) % images.length;
 }
-
-
 
 // Chama a função inicialmente para definir a primeira imagem do slideshow
 changeSlide();
