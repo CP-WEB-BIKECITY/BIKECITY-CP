@@ -1,9 +1,27 @@
-
 /* Estilos gerais */
 * {
     margin: 0;
     padding: 0;
 }
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
 
 h1 {
     color: rgb(176, 176, 0);
@@ -12,6 +30,7 @@ h1 {
 
 body {
     font-family: Arial, sans-serif;
+    margin-bottom: 80px; /* Altura do footer */
 }
 
 header {
@@ -51,11 +70,109 @@ header img {
 main {
     padding: 20px;
 }
+#modal{
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Posição fixa para ficar em cima da tela */
+    top: 0; /* Alinha o topo do modal com o topo da janela do navegador */
+    left: 0; /* Alinha a esquerda do modal com a esquerda da janela do navegador */
+    width: 100%; /* Define a largura do modal para ocupar toda a largura da tela */
+    height: 100%; /* Define a altura do modal para ocupar toda a altura da tela */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+    z-index: 999; /* Coloca o modal acima de todo o conteúdo da página */
+    justify-items: center;
+
+
+
+}
+
+#layout-modal{
+        position: absolute; /* Posição absoluta dentro do modal */
+        top: 50%; /* Alinha o topo do conteúdo modal ao centro vertical */
+        left: 50%; /* Alinha o conteúdo modal ao centro horizontal */
+        transform: translate(-50%, -50%); /* Centraliza o conteúdo modal */
+        background-color: #fff; /* Fundo branco */
+        padding: 20px; /* Espaçamento interno */
+        border-radius: 10px; /* Cantos arredondados */
+        min-width: 600px;
+        
+
+}
+
+#itens-modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    
+}
+
+.valor{
+    font-weight: bold;
+}
+
+.meu-carrinho{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.endereço{
+    font-weight: bold;
+    margin-top: 10px;
+}
+#address{
+    width: 100%;
+    border: 2px;
+    padding: 1px;
+    border-radius: 1px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin-top: 10px;
+}
+.text-warn{
+    color: red;
+    display: none;
+}
+#close-modal{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: red;
+    font-size: medium;
+    padding: 5px;
+}
+#checkout-modal{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: yellow;
+    font-size: medium ;
+    padding: 5px;
+}
+
+#modal-bottons{
+    display: flex;
+    justify-content: space-between;
+
+}
 
 footer {
     background-color: #333;
     color: rgb(176, 176, 0);
     text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#cart-button {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: yellow;
     padding: 10px;
 }
 
