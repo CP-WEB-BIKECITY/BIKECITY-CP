@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BikeCity</title>
     <link rel="stylesheet" href="./CSS/style.css">
+    <!-- Adicionando fonte Roboto do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -30,7 +31,6 @@
                 <li><a href="contato.html">Contato</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
-              
             </ul>
         </nav>
         <img src="img/logo_bike.svg" alt="imagem ilustrativa de uma mulher andando de bicicleta" width="70px">
@@ -46,18 +46,21 @@
     <div id="card-container">
         <!-- Primeira fileira -->
         <div class="row">
+            <!-- Produto 1 -->
             <div class="produtos">
                 <img src="https://bikesky.com.br/wp-content/uploads/2023/01/75-300x300.png" alt="Produto 1">
                 <h2>Nome do Produto</h2>
-                <p> Bicicleta urbana elegante, perfeita para passeios na cidade. Com design moderno e confortável, é ideal para deslocamentos diários.</p>
+                <p>Bicicleta urbana elegante, perfeita para passeios na cidade. Com design moderno e confortável, é ideal para deslocamentos diários.</p>
                 <button id="Comprar">Comprar</button>
             </div>
+            <!-- Produto 2 -->
             <div class="produtos">
                 <img src="https://www.taunusbike.com.br/wp-content/uploads/2023/08/bicicleta_mtb_taunus_aro_29_react_one_21v_preto_fosco_75_1_02e6df14546a1b74b0ad8c95d10fff6d-300x300.jpg" alt="Produto 2">
                 <h2>Nome do Produto</h2>
                 <p>Mountain bike resistente e versátil, projetada para trilhas desafiadoras. Com suspensão dianteira e quadro reforçado, oferece alto desempenho em terrenos irregulares.</p>
                 <button id="Comprar">Comprar</button>
             </div>
+            <!-- Produto 3 -->
             <div class="produtos">
                 <img src="https://images.tcdn.com.br/img/img_prod/576318/90_bike_mtb_eletrica_oggi_big_wheel_8_0s_2023_preto_azul_8v_shimano_10767_1_32edf628329237b3976499af21dbc90c.jpg" alt="Produto 3">
                 <h2>Nome do Produto</h2>
@@ -68,55 +71,66 @@
 
         <!-- Segunda fileira -->
         <div class="row">
+            <!-- Produto 4 -->
             <div class="produtos">
                 <img src="https://images.tcdn.com.br/img/img_prod/777105/90_bicicleta_aro_29_ks2_power_one_24_vel_shimano_freio_a_disco_13721_4_d3d89345ef04da1591bc2ed12ca56e31.jpg" alt="Produto 4">
                 <h2>Nome do Produto</h2>
                 <p>Bicicleta de estrada aerodinâmica, projetada para ciclistas que buscam alta performance em competições. Leve, rápida e responsiva, oferece máximo desempenho em velocidades elevadas.</p>
                 <button id="Comprar">Comprar</button>
             </div>
+            <!-- Produto 5 -->
             <div class="produtos">
                 <img src="https://cdn.awsli.com.br/300x300/1259/1259538/produto/192588101/krw-bikes---out-20220185-5qsobfn0ng.jpg" alt="Produto 5">
                 <h2>Nome do Produto</h2>
                 <p>Bicicleta infantil colorida, perfeita para crianças em idade pré-escolar. Com rodinhas laterais removíveis e freios suaves, proporciona segurança e diversão aos pequenos ciclistas.</p>
-                <butto id="Comprar">Comprar</button>
+                <button id="Comprar">Comprar</button>
             </div>
+            <!-- Produto 6 -->
             <div class="produtos">
                 <img src="https://cdn.awsli.com.br/300x300/64/64923/produto/209751948/71168-2ewi134d0y.png" alt="Produto 6">
                 <h2>Nome do Produto</h2>
-                <p> Bicicleta de touring confortável, projetada para viagens de longa distância. Equipada com bagageiro traseiro e guidão ajustável, oferece comodidade e praticidade para aventuras na estrada.</p>
+                <p>Bicicleta de touring confortável, projetada para viagens de longa distância. Equipada com bagageiro traseiro e guidão ajustável, oferece comodidade e praticidade para aventuras na estrada.</p>
                 <button id="Comprar">Comprar</button>
             </div>
         </div>
     </div>
+    
+    <!-- Modal -->
     <div id="modal">
+        <!-- Layout do modal -->
         <div id="layout-modal">
+            <!-- Título do carrinho -->
             <h2 class="meu-carrinho">Meu carrinho</h2>
             
+            <!-- Itens do carrinho -->
             <div id="itens-modal"></div>
             
+            <!-- Total do carrinho -->
             <p class="valor">total: <span id="cart-total">0.00</span></p>
             
+            <!-- Endereço de entrega -->
             <p class="Endereço">Endereço de entrega:</p>
             
-            <input type="text"
-            placeholder="Digite seu Endereço:" id="address">
+            <!-- Campo de entrada de endereço -->
+            <input type="text" placeholder="Digite seu Endereço:" id="address">
+            
+            <!-- Instrução sobre o endereço -->
             <p class="text-warn">Digite seu Endereço completo</p>
+            
+            <!-- Botões do modal -->
             <div id="modal-bottons">
                 <button id="close-modal">fechar</button>
                 <button id="checkout-modal">Finalizar Compra</button>
             </div>
 
         </div>
-
     </div>
    
     <footer>
         <button id="cart-button">
             (<span id="cart-count">0</span>)
             Veja meu carrinho
-            
         </button>
-        
     </footer>
 
     <script src="script.js"></script>
