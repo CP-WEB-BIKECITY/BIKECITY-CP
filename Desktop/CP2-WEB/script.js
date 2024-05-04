@@ -28,3 +28,7 @@ changeSlide();
 
 // Define um intervalo para chamar a função de mudar o slide a cada 5 segundos (5000 milissegundos)
 setInterval(changeSlide, 5000);
+
+
+
+
