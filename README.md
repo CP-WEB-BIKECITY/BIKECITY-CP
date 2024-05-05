@@ -2,14 +2,21 @@
 
 BikeCity é um site de comércio eletrônico especializado em bicicletas. Oferecemos uma ampla variedade de modelos para diferentes necessidades e estilos de ciclismo, proporcionando uma experiência de compra fácil e intuitiva para nossos clientes.
 
+
 ### Sumário
 
 Estrutura do Site
+
 Design e Estilo
+
 Funcionalidades
+
 Como Usar
+
 Informações Adicionais
+
 Licença
+
 
 ### Estrutura do Site
 
@@ -25,10 +32,14 @@ login.html: Página de login para usuários.
 
 quiz.html: Página com um quiz para os visitantes.
 
+
 ### Design e Estilo
 Fonte: Usamos a fonte Roboto do Google Fonts para uma aparência moderna e limpa.
+
 Layout: O layout é responsivo, centrando e separando os produtos na página inicial.
+
 Imagem: A página inicial tem um slideshow ilustrativo para apresentar os produtos.
+
 
 ### Funcionalidades
 
@@ -39,6 +50,7 @@ Modal do Carrinho: O modal exibe os itens no carrinho e permite finalizar a comp
 Quiz: Participe do quiz sobre ciclismo para testar seu conhecimento e ganhar descontos especiais.
 
 Interatividade: Utilizamos JavaScript para adicionar interatividade, incluindo alertas de boas-vindas e funcionalidades do carrinho.
+
 
 ### Como Usar
 
@@ -51,6 +63,7 @@ Visualizando o Carrinho: Clique em "Veja meu carrinho" no rodapé para ver os it
 Fornecendo Endereço: No modal do carrinho, insira seu endereço para entrega.
 
 Participando do Quiz: Participe do quiz para testar seu conhecimento e ganhar descontos.
+
 
 ### Informações Adicionais
 
