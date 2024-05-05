@@ -113,3 +113,17 @@ label{
     transform: scale(1.2);
     background-color: rgba(255, 255, 0, 0.623);
 }
+
+
+#voltarindex {
+    display: flex;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: fixed; /* Fixa o elemento na posição desejada */
+    bottom: 10px; /* Define a distância entre o elemento e a parte inferior da janela do navegador */
+    left: 50%; /* Alinha o elemento ao centro horizontalmente */
+    transform: translateX(-50%); /* Centraliza horizontalmente o elemento */
+}
