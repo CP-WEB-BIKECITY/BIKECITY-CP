@@ -147,3 +147,107 @@ function removeItemCart(name){
 
     }
 }
+
+// QUIZ
+
+function comecar() {
+    document.getElementById("quiz_butao").style.display = "none"; // Oculta o botão "começar"
+    document.getElementById("quiz_respostas").style.display = "block"; // Exibe as perguntas e as respostas do usuário
+
+    // perguntas, alternativas e resposta certa do quiz
+    const questionario = [
+        // 01
+        {
+            pergunta: "Qual é o nome dado à parte da bicicleta onde o ciclista senta?",
+            alternativa: ["Guidão", "Selim", "Quadro"],
+            certo: "Selim" 
+        },
+        // 02
+        {
+            pergunta: "Qual é o componente da bicicleta que transfere a energia das pedaladas para a roda traseira?",
+            alternativa: ["1817", "1869", "1903"],
+            certo: "1817"
+        },
+        // 03
+        {
+            pergunta: "Qual é o evento de ciclismo de estrada mais prestigiado e conhecido no mundo?",
+            alternativa: ["Giro d'Italia", "Tour de France", "Vuelta a España"],
+            certo: "Tour de France"
+        },
+        // 04
+        {
+            pergunta: "Qual é o componente da bicicleta que transfere a energia das pedaladas para a roda traseira?",
+            alternativa: ["Pedais", "Câmbio", "Corrente"],
+            certo: "Corrente"
+        },
+        //05
+        {
+            pergunta: "Que tipo de bicicleta é projetada para uso em trilhas e terrenos acidentados?", 
+            alternativa: ["Bicicleta de Estrada", "Bicicleta de Triatlo", "Bicicleta Mountain Bike (MTB)"], 
+            certo: "Bicicleta Mountain Bike (MTB)" 
+        },
+        //06
+        {
+            pergunta: "Quais são os três tipos principais de freios usados em bicicletas?", 
+            alternativa: ["Disco, Tambor, V-Brake", "Pedal, Manual, Automático", "Tambor, Pinça, Disco"], 
+            certo: "Disco, Tambor, V-Brake" 
+        },
+        // 07
+        {
+            pergunta: "Qual destes é um tipo de bicicleta projetado para viagens longas em estradas pavimentadas?", 
+            alternativa: ["Bicicleta de Montanha (MTB)", "Bicicleta de Estrada", "Bicicleta Híbrida"], 
+            certo: "Bicicleta de Estrada" 
+        },
+        // 08
+        {
+            pergunta: "Qual é o nome dado à modalidade de ciclismo que envolve competições de curta distância em uma pista oval?",
+            alternativa: ["Mountain Bike", "BMX", "Velódromo"],
+            certo: "Velódromo" 
+        },
+        // 09
+        {
+            pergunta: "Qual é o componente da bicicleta que é usado para mudar as marchas?",
+            alternativa: ["Manoplas", "Pedais", "Câmbio"],
+            certo: "Manoplas"
+        },
+        // 10
+        {
+            pergunta: "Qual é o material mais comum usado na fabricação de quadros de bicicletas de alta qualidade?",
+            alternativa: ["Aço", "Alumínio", "Carbono"],
+            certo: "Carbono"
+        }
+    ];
+
+    // variáveis para armazenar as respostas e a contagem de respostas certas
+    let respostas = {};
+    let pontuacao = 0;
+
+    // Função para remover acentos e colocar em minúsculas
+    function formatarResposta(texto) {
+        return texto.normalize("NFD").replace(/[\u0300-\u036f|\u00b4|\u0060|\u005e|\u007e]/g, "").toLowerCase();
+    }
+
+    // função para apresentar a pergunta e verificar se a resposta está correta ou errada
+    function perguntar(index){
+        const pergunta = questionario[index];
+        const correcao = prompt(pergunta.pergunta + "\n" + pergunta.alternativa.join("\n")); // solicita uma resposta ao usuário
+        const respostaFormatada = formatarResposta(correcao); // Formata a resposta do usuário
+        respostas[index] = respostaFormatada; // Armazena a resposta do usuário
+        if (respostaFormatada === formatarResposta(pergunta.certo)) { // Verifica se a resposta está correta
+            pontuacao++; // Aumenta a pontuação se a resposta estiver correta
+        }
+    }
+
+    // Executa as perguntas
+    for (let i = 0; i < questionario.length; i++) {
+        perguntar(i);
+    }
+
+    // Mostra o resultado após o questionário
+    let resultado = "<h2>Respostas:</h2>";
+    for (let i = 0; i < questionario.length; i++) {
+        resultado += "<p><strong>Pergunta " + (i + 1) + ":</strong> " + questionario[i].pergunta + "<br><strong>Sua resposta:</strong> " + respostas[i] + "<br><strong>Resposta correta:</strong> " + questionario[i].certo + "</p>";
+    }
+    resultado += "<h2>Score: " + pontuacao + " de " + questionario.length + "</h2>";
+    document.getElementById("quiz_respostas").innerHTML = resultado; // Adiciona os resultados à página do quiz
+}
