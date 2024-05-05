@@ -8,20 +8,19 @@
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  .roboto-medium {
+}
+
+.roboto-medium {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
-  }
-  
-  .roboto-bold {
+}
+
+.roboto-bold {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
-  }
-  
+}
 
 h1 {
     color: rgb(176, 176, 0);
@@ -34,8 +33,8 @@ body {
 }
 
 header {
-    background-color: white;
-    color: #fff;
+    background-color: #333;
+    color: #333;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,7 +69,8 @@ header img {
 main {
     padding: 20px;
 }
-#modal{
+
+#modal {
     display: none; /* Inicialmente oculto */
     position: fixed; /* Posição fixa para ficar em cima da tela */
     top: 0; /* Alinha o topo do modal com o topo da janela do navegador */
@@ -80,37 +80,33 @@ main {
     background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
     z-index: 999; /* Coloca o modal acima de todo o conteúdo da página */
     justify-items: center;
-
-
-
 }
 
-#layout-modal{
-        position: absolute; /* Posição absoluta dentro do modal */
-        top: 50%; /* Alinha o topo do conteúdo modal ao centro vertical */
-        left: 50%; /* Alinha o conteúdo modal ao centro horizontal */
-        transform: translate(-50%, -50%); /* Centraliza o conteúdo modal */
-        background-color: #fff; /* Fundo branco */
-        padding: 20px; /* Espaçamento interno */
-        border-radius: 10px; /* Cantos arredondados */
-        min-width: 600px;
-        
-
+#layout-modal {
+    position: absolute; /* Posição absoluta dentro do modal */
+    top: 50%; /* Alinha o topo do conteúdo modal ao centro vertical */
+    left: 50%; /* Alinha o conteúdo modal ao centro horizontal */
+    transform: translate(-50%, -50%); /* Centraliza o conteúdo modal */
+    background-color: #fff; /* Fundo branco */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Cantos arredondados */
+    min-width: 600px;
 }
 
-#itens-modal{
+#itens-modal {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 2px;
-    
+    gap: 20px; /* Adiciona um espaçamento entre os itens */
+    padding: 20px;
+    max-height: 400px; /* Define uma altura máxima para o modal de itens */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical caso o conteúdo seja maior que a altura máxima */
 }
 
-.valor{
+.valor {
     font-weight: bold;
 }
 
-.meu-carrinho{
+.meu-carrinho {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -118,11 +114,12 @@ main {
     margin-bottom: 2px;
 }
 
-.endereço{
+.endereço {
     font-weight: bold;
     margin-top: 10px;
 }
-#address{
+
+#address {
     width: 100%;
     border: 2px;
     padding: 1px;
@@ -131,11 +128,13 @@ main {
     border-bottom: 2px solid black;
     margin-top: 10px;
 }
-.text-warn{
+
+.text-warn {
     color: red;
     display: none;
 }
-#close-modal{
+
+#close-modal {
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -143,19 +142,19 @@ main {
     font-size: medium;
     padding: 5px;
 }
-#checkout-modal{
+
+#checkout-modal {
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
     background-color: yellow;
-    font-size: medium ;
+    font-size: medium;
     padding: 5px;
 }
 
-#modal-bottons{
+#modal-bottons {
     display: flex;
     justify-content: space-between;
-
 }
 
 footer {
@@ -174,14 +173,27 @@ footer {
     border-radius: 10px;
     background-color: yellow;
     padding: 10px;
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #333; /* Define a cor do texto */
+    border: 2px solid #333; /* Adiciona uma borda sólida */
+    transition: background-color 0.3s, color 0.3s; /* Adiciona transições suaves */
 }
+
+#cart-button:hover {
+    background-color: #333; /* Altera a cor de fundo ao passar o mouse sobre o botão */
+    color: yellow; /* Altera a cor do texto ao passar o mouse sobre o botão */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+}
+
 
 #slideshow-container {
     position: relative;
     width: 100%;
     height: 600px;
     overflow: hidden;
+    margin-bottom: 20px; /* Adiciona um espaço na parte inferior */
 }
+
 
 #slideshow-image {
     position: absolute;
@@ -203,32 +215,41 @@ footer {
 
 /* Estilo dos produtos */
 .produtos {
-    border: 1px solid #ddd;
+    border: 1px solid #000; /* Alterar a cor da borda para preto */
     border-radius: 5px;
     width: 300px;
     margin: 10px;
-    padding: 10px;
-    text-align: center;
+    padding: 20px;
+    text-align: left;
+    background-color: var(--cor-fundo);
+    border-bottom: 2px solid #000; /* Definir a cor e a espessura da borda inferior */
+    cursor: pointer;
 }
+
+
 
 .produtos img {
     width: 100%;
     height: auto;
+    border-radius: 5px; /* Adiciona bordas arredondadas à imagem */
 }
 
 .produtos h2 {
     font-size: 20px;
     color: #333;
+    margin-bottom: 10px; /* Espaçamento inferior */
 }
 
 .produtos p {
     font-size: 16px;
     color: #666;
+    line-height: 1.5; /* Espaçamento entre linhas */
+    font-weight: bold; /* Definindo o peso da fonte como negrito */
 }
 
 .produtos button {
-    background-color: #007bff;
-    color: #fff;
+    background-color: yellow;
+    color: #333;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -237,11 +258,75 @@ footer {
 }
 
 .produtos:hover {
-    transform: scale(1.05);
-    transition: transform .2s;
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+    transition: transform 0.2s, box-shadow 0.2s; /* Adiciona uma transição suave */
 }
 
+
+
+
 .produtos button:hover {
-    background-color: #0056b3;
-    transition: background-color .2s;
+    background-color: #333;
+    color: yellow;
+    transition: background-color 0.2s;
+}
+
+.cart-item {
+    display: flex;
+    gap: 20px; /* Adiciona um espaçamento entre os elementos dos itens */
+    padding: 10px;
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    background-color: #f9f9f9; /* Adiciona uma cor de fundo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    transition: background-color 0.3s, transform 0.3s; /* Adiciona uma transição suave de cor de fundo e transformação */
+}
+
+.cart-item:hover {
+    background-color: #e9e9e9; /* Altera a cor de fundo quando o item do carrinho é hover */
+    transform: translateY(-3px); /* Adiciona um efeito de elevação suave ao passar o mouse sobre o item */
+}
+
+.cart-item img {
+    width: 80px; /* Ajusta o tamanho da imagem */
+    height: auto;
+    border-radius: 5px; /* Adiciona bordas arredondadas à imagem */
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-name {
+    font-size: 18px; /* Ajusta o tamanho da fonte do nome do item */
+    color: #333; /* Define a cor do texto */
+    font-weight: bold; /* Torna o nome do item em negrito */
+}
+
+.cart-item-price {
+    font-size: 16px; /* Ajusta o tamanho da fonte do preço */
+    color: #888; /* Define a cor do texto do preço */
+}
+
+.cart-item-remove button {
+    background-color: #f00;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cart-item-remove button:hover {
+    background-color: #d00;
+}
+
+.remove-btn{
+    background-color: #f00;
+    color: black;
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
 }
