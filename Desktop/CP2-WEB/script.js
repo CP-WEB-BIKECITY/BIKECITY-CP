@@ -151,7 +151,7 @@ function removeItemCart(name){
 // QUIZ
 
 function comecar() {
-    document.getElementById("quiz_butao").style.display = "none"; // Oculta o botão "começar"
+    document.getElementById("quiz_botao").style.display = "none"; // Oculta o botão "começar"
     document.getElementById("quiz_respostas").style.display = "block"; // Exibe as perguntas e as respostas do usuário
 
     // perguntas, alternativas e resposta certa do quiz
@@ -233,10 +233,17 @@ function comecar() {
         const correcao = prompt(pergunta.pergunta + "\n" + pergunta.alternativa.join("\n")); // solicita uma resposta ao usuário
         const respostaFormatada = formatarResposta(correcao); // Formata a resposta do usuário
         respostas[index] = respostaFormatada; // Armazena a resposta do usuário
+        let cor = ""; // Inicializa uma variável para armazenar a cor do texto da resposta
         if (respostaFormatada === formatarResposta(pergunta.certo)) { // Verifica se a resposta está correta
             pontuacao++; // Aumenta a pontuação se a resposta estiver correta
+            cor = "green"; // Define a cor como verde se a resposta estiver correta
+        } else {
+            cor = "red"; // Define a cor como vermelha se a resposta estiver incorreta
         }
+        const respostaHTML = "<strong>Sua resposta:</strong> <span style='color: " + cor + "'>" + correcao + "</span>";
+        return respostaHTML;
     }
+    
 
     // Executa as perguntas
     for (let i = 0; i < questionario.length; i++) {
@@ -244,10 +251,19 @@ function comecar() {
     }
 
     // Mostra o resultado após o questionário
-    let resultado = "<h2>Respostas:</h2>";
+    let resultado = "<h2 class='resp'>Respostas:</h2>";
     for (let i = 0; i < questionario.length; i++) {
-        resultado += "<p><strong>Pergunta " + (i + 1) + ":</strong> " + questionario[i].pergunta + "<br><strong>Sua resposta:</strong> " + respostas[i] + "<br><strong>Resposta correta:</strong> " + questionario[i].certo + "</p>";
+        resultado += "<div class='resposta'><p><strong>Pergunta " + (i + 1) + ":</strong> " + questionario[i].pergunta + "</p><p><strong>Sua resposta:</strong> " + respostas[i] + "</p><p><strong>Resposta correta:</strong> " + questionario[i].certo + "</p></div>";
     }
-    resultado += "<h2>Score: " + pontuacao + " de " + questionario.length + "</h2>";
+    resultado += "<h2 class='score'>Score: " + pontuacao + " de " + questionario.length + "</h2>";
+
+    // Adiciona o cupom de desconto correspondente à pontuação
+    if (pontuacao >= 6) {
+        resultado += "<p class='cupom'>Parabéns! Você ganhou um cupom de desconto: CICLISMO20OFF</p>";
+    } else if (pontuacao >= 4 && pontuacao < 6) {
+        resultado += "<p class='cupom'>Parabéns! Você ganhou um cupom de desconto: BIKE5OFF</p>";
+    } else {
+        resultado += "<p class='cupom'>Que pena! Você não atingiu os pontos necessários para ganhar um desconto.</p>";
+    }
     document.getElementById("quiz_respostas").innerHTML = resultado; // Adiciona os resultados à página do quiz
 }

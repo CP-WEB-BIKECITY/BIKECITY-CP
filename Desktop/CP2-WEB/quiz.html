@@ -5,17 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
 
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./CSS/quiz.css">
 
 </head>
 <body>
-    <h1>Desafio Ciclístico: Teste seu Conhecimento e Ganhe um Desconto!</h1>
+    <div class="corpo">
+        <img src="./img/quiz.png" alt="Quiz">
+        
+        <div id="header">
+            <h1>Desafio Ciclístico: Teste seu Conhecimento e Ganhe um Desconto!</h1>
+        </div>
+        
+        <div class="descricao">
+            <p>Explore seu conhecimento sobre o mundo das bicicletas e ciclismo e aproveite para ganhar um desconto especial em sua próxima compra.</p>
+        </div>
+        
+        <div>
+            <button id="quiz_botao" onclick="comecar()">Começar</button>
+        </div>
 
-    <p>Explore seu conhecimento sobre o mundo das bicicletas e ciclismo e aproveite para ganhar um desconto especial em sua próxima compra.</p>
-
-    <button id="quiz_butao" onclick="comecar()">Começar</button>
-
-    <div id="quiz_respostas" style="display: none;"></div> <!-- recebe as perguntas e as respostas do usuário -->
+        <div id="quiz_respostas" style="display: none;"></div>
+    </div>
+    
+    <div id="voltar">
+        <a href="./index.html">Voltar Para a Página Principal</a>
+    </div>
 
     <script src="script.js"></script>
 </body>
