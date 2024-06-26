@@ -73,3 +73,6 @@ Contato: Entre em contato com a equipe através da página Contato.
 
 link repositório: https://github.com/CP-WEB-BIKECITY/BIKECITY-CP
 
+![image](https://github.com/CP-WEB-BIKECITY/BIKECITY-CP/assets/80282965/323c00c2-8cae-4b4f-bbbf-c3126c54ac2d)
+![image](https://github.com/CP-WEB-BIKECITY/BIKECITY-CP/assets/80282965/102ac8e8-c249-404e-a6a2-8d49f8511122)
+
